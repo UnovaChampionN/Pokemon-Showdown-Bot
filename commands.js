@@ -418,7 +418,7 @@ exports.commands = {
 		if (!arg) return false;
 		if (!this.settings.bannedphrases) return this.say(room, 'Phrase "' + arg + '" is not currently banned.');
 
-		var bannedphrases = this.settings.bannedphrases ? this.settings.bannedphrases[tarRoom] : null;
+		var bannedPhrases = this.settings.bannedphrases[tarRoom];
 		if (!bannedPhrases || !bannedPhrases[arg]) return this.say(room, 'Phrase "' + arg + '" is not currently banned.');
 
 		delete bannedPhrases[arg];
