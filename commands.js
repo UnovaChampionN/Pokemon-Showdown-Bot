@@ -17,18 +17,19 @@ exports.commands = {
 	 *
 	 * These commands are here to provide information about the bot.
 	 */
-
-	credits: 'about',
+	 
+	 credits: 'about',
 	about: function (arg, user, room) {
 		var text = (room === user || user.hasRank(room, '#')) ? '' : '/pm ' + user.id + ', ';
-		text += '**Pokémon Showdown Bot** user: Quinella, TalkTakesTime, and Morfent';
+		text += '**RKO-Bot:** A bot that hits an RKO outta nowhere...when you least expect it. Base repo made by TTT, modified by Ruby D.';
 		this.say(room, text);
-	},
+	
 	git: function (arg, user, room) {
 		var text = (room === user || user.isExcepted) ? '' : '/pm ' + user.id + ', ';
 		text += '**Pokemon Showdown Bot** source code: ' + Config.fork;
 		this.say(room, text);
 	},
+	
 	help: 'guide',
 	guide: function (arg, user, room) {
 		var text = (room === user || user.hasRank(room, '#'))  ? '' : '/pm ' + user.id + ', ';
@@ -586,8 +587,10 @@ exports.commands = {
 			case 19:
 				text += "Don't count on it.";
 				break;
+			case 20:
+				text += "You got struck by an **RKO OUTTA NOWHERE**!";
+				break;
 		}
-
 		this.say(room, text);
 	},
 
@@ -874,3 +877,46 @@ exports.commands = {
 		this.say(room, 'The buzzer has been reset.');
 	},
 };
+
+/* Pro Wrestling room commands */
+	smackdown: 'smackdown',
+	smackdownresults: function(arg, by, room, con) {
+		if (this.hasRank(by, '+%@#~') || room.charAt(0) === ',') {
+			var text = '';
+		} else {
+			var text = '/pm ' + by + ', ';
+		}
+		text += 'http://bleacherreport.com/articles/2449358-wwe-smackdown-results-winners-grades-reaction-and-highlights-from-april-30 **Smackdown Results: April 30th**';
+		this.say(con, room, text);
+	},
+	
+	raw: 'rawresults',
+	rawresults: function(arg, by, room, con) {
+		if (this.hasRank(by, '+%@#~') || room.charAt(0) === ',') {
+			var text = '';
+		} else {
+			var text = '/pm ' + by + ', ';
+		}
+		text += 'http://bleacherreport.com/articles/2453752-wwe-raw-results-winners-grades-reaction-and-highlights-from-may-4 **Raw Results: May 4th**';
+		this.say(con, room, text);
+	},
+	
+	ppv: function(arg, by, room, con) {
+		if (this.hasRank(by, '+%@#~') || room.charAt(0) === ',') {
+			var text = '';
+		} else {
+			var text = '/pm ' + by + ', ';
+		}
+		text += "This month's PPV is **Payback**.";
+		this.say(con, room, text);
+	},
+	
+	ppvresults: function(arg, by, room, con) {
+		if (this.hasRank(by, '+%@#~') || room.charAt(0) === ',') {
+			var text = '';
+		} else {
+			var text = '/pm ' + by + ', ';
+		}
+		text += "**Extreme Rules Results** http://bleacherreport.com/articles/2442937-wwe-extreme-rules-2015-results-biggest-winners-and-losers-from-ppv";
+		this.say(con, room, text);
+	},
