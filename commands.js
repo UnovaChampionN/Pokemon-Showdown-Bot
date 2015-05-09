@@ -882,13 +882,13 @@ exports.commands = {
 /* Pro Wrestling room commands */
 	smackdown: function (arg, user, room) {
 		var text = (room === user || user.hasRank(room, '+%@#')) ? '' : '/pm ' + user.id + ', ';
-		text += 'http://bleacherreport.com/articles/2449358-wwe-smackdown-results-winners-grades-reaction-and-highlights-from-april-30 **Smackdown Results: April 30th**';
+		text += "http://bleacherreport.com/articles/2449358-wwe-smackdown-results-winners-grades-reaction-and-highlights-from-april-30 **Smackdown Results: April 30th**";
 		this.say(room, text);
 	},
 	
 	raw: function (arg, user, room) {
 		var text = (room === user || user.hasRank(room, '+%@#')) ? '' : '/pm ' + user.id + ', ';
-		text += 'http://bleacherreport.com/articles/2453752-wwe-raw-results-winners-grades-reaction-and-highlights-from-may-4 **Raw Results: May 4th**';
+		text += "http://bleacherreport.com/articles/2453752-wwe-raw-results-winners-grades-reaction-and-highlights-from-may-4 **Raw Results: May 4th**";
 		this.say(room, text);
 	},
 
