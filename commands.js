@@ -23,6 +23,7 @@ exports.commands = {
 		var text = (room === user || user.hasRank(room, '#')) ? '' : '/pm ' + user.id + ', ';
 		text += '**RKO-Bot:** A bot that hits an RKO outta nowhere...when you least expect it. Base repo made by TTT, modified by Ruby D.';
 		this.say(room, text);
+	},
 	
 	git: function (arg, user, room) {
 		var text = (room === user || user.isExcepted) ? '' : '/pm ' + user.id + ', ';
