@@ -18,25 +18,6 @@ exports.commands = {
 	 * These commands are here to provide information about the bot.
 	 */
 	
-	smackdown: function (arg, user, room) {
-		var text = (room === user || user.hasRank(room, '+%@#')) ? '' : '/pm ' + user.id + ', ';
-		text += 'http://bleacherreport.com/articles/2449358-wwe-smackdown-results-winners-grades-reaction-and-highlights-from-april-30 **Smackdown Results: April 30th**';
-		this.say(room, text);
-	},
-	
-	raw: function (arg, user, room) {
-		var text = (room === user || user.hasRank(room, '+%@#')) ? '' : '/pm ' + user.id + ', ';
-		text += 'http://bleacherreport.com/articles/2453752-wwe-raw-results-winners-grades-reaction-and-highlights-from-may-4 **Raw Results: May 4th**';
-		this.say(room, text);
-	},
-
-	ppv: function (arg, user, room) {
-		var text = (room === user || user.hasRank(room, '+%@#')) ? '' : '/pm ' + user.id + ', ';
-		text += 'This month\'s PPV is **Payback** | Results for Extreme Rules: http://bleacherreport.com/articles/2442937-wwe-extreme-rules-2015-results-biggest-winners-and-losers-from-ppv';
-		this.say(room, text);
-	},
-
-	
 	credits: 'about',
 	about: function (arg, user, room) {
 		var text = (room === user || user.hasRank(room, '#')) ? '' : '/pm ' + user.id + ', ';
@@ -897,3 +878,24 @@ exports.commands = {
 		this.say(room, 'The buzzer has been reset.');
 	},
 };
+
+/* Pro Wrestling Commands */
+
+	sd: 'smackdown',
+	smackdown: function (arg, user, room) {
+		var text = (room === user || user.hasRank(room, '+%@#')) ? '' : '/pm ' + user.id + ', ';
+		text += 'http://bleacherreport.com/articles/2449358-wwe-smackdown-results-winners-grades-reaction-and-highlights-from-april-30 **Smackdown Results: April 30th**';
+		this.say(room, text);
+	},
+	
+	raw: function (arg, user, room) {
+		var text = (room === user || user.hasRank(room, '+%@#')) ? '' : '/pm ' + user.id + ', ';
+		text += 'http://bleacherreport.com/articles/2453752-wwe-raw-results-winners-grades-reaction-and-highlights-from-may-4 **Raw Results: May 4th**';
+		this.say(room, text);
+	},
+
+	ppv: function (arg, user, room) {
+		var text = (room === user || user.hasRank(room, '+%@#')) ? '' : '/pm ' + user.id + ', ';
+		text += 'This month\'s PPV is **Payback** | Results for Extreme Rules: http://bleacherreport.com/articles/2442937-wwe-extreme-rules-2015-results-biggest-winners-and-losers-from-ppv';
+		this.say(room, text);
+	},
