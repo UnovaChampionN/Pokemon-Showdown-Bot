@@ -877,9 +877,8 @@ exports.commands = {
 		this.buzzed = '';
 		this.say(room, 'The buzzer has been reset.');
 	},
-};
-
-/* Pro Wrestling Commands */
+	
+	/* Pro Wrestling Commands */
 
 	sd: 'smackdown',
 	smackdown: function (arg, user, room) {
@@ -899,3 +898,4 @@ exports.commands = {
 		text += 'This month\'s PPV is **Payback** | Results for Extreme Rules: http://bleacherreport.com/articles/2442937-wwe-extreme-rules-2015-results-biggest-winners-and-losers-from-ppv';
 		this.say(room, text);
 	},
+};
