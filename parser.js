@@ -28,8 +28,7 @@ try {
 } catch (e) {} // file doesn't exist [yet]
 if (!Object.isObject(settings)) settings = {};
 
-{ 
-	rubyd: '/me hits an RKO on you outta nowhere!'};
+//{ 	rubyd: '/me hits an RKO on you outta nowhere!'};
 exports.parse = {
 	actionUrl: url.parse('https://play.pokemonshowdown.com/~~' + Config.serverid + '/action.php'),
 	'settings': settings,
@@ -222,7 +221,7 @@ exports.parse = {
 				if (user.isSelf) return false;
 				if (this.isBlacklisted(user.id, room.id)) return this.say(room, '/roomban ' + user.id + ', Blacklisted user');
 				this.updateSeen(user.id, spl[1], room.id);
-				this.say(user.id, object[user.id])
+				//this.say(user.id, object[user.id])
 				break;
 			case 'l': case 'L':
 				let username = spl[2];
