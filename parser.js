@@ -226,7 +226,7 @@ exports.parse = {
 				if (user.isSelf) return false;
 				if (this.isBlacklisted(user.id, room.id)) return this.say(room, '/roomban ' + user.id + ', Blacklisted user');
 				this.updateSeen(user.id, spl[1], room.id);
-				this.say(room, greetings[user.id])
+				if (this.say(room, greetings[user.id])) return
 				break;
 			case 'l': case 'L':
 				let username = spl[2];
