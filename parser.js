@@ -30,8 +30,9 @@ if (!Object.isObject(settings)) settings = {};
 
 var greetings =
 	{ 	
-		rubyd: '/me hits an RKO on you outta nowhere!',
-		sirdonovan: 'test'
+		rubyd: '/me hits an RKO on you outta nowhere! Ruby D: The Second Coming: https://www.youtube.com/watch?v=udU5agzB77Q',
+		sirdonovan: 'Honorary Placeholder',
+		killoptickill: 'KILL OPTIC KILL: Mariah Carey - Touch my Body: https://www.youtube.com/watch?v=9b8erWuBA44'
 	};
 	
 exports.parse = {
